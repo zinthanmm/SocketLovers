@@ -19,7 +19,7 @@ import javafx.stage.Stage;
 
 public class Client extends Application {
 
-	public static Label logs = new Label("[Chat Room Started]");
+	public static Label logs = new Label("[Chat Room]");
 	private TextField enterName = new TextField();
 	public static TextField enterMessage = new TextField();
 	private Scene scene1, scene2;
