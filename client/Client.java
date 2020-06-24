@@ -52,8 +52,9 @@ public class Client extends Application {
 			Thread connectServerThread = new Thread(connectServer);
 			connectServerThread.start();
 
+			// client window layout settings
 			ScrollPane layout = new ScrollPane();
-			layout.setPrefSize(400, 600);
+			layout.setPrefSize(500, 600);
 			layout.setContent(logs);
 
 			BorderPane root2 = new BorderPane();
@@ -73,19 +74,20 @@ public class Client extends Application {
 				String msg = Client.enterMessage.getText();
 				int i = 0;
 
+				// Caesar cipher encryption
 				char[] chars = msg.toCharArray();
 				int k = chars.length;
-				char[] myenchar = new char[k];
+				char[] mychar = new char[k];
 				for (char c : chars) {
 
 					c += 5;
-					myenchar[i] = c;
+					mychar[i] = c;
 
 					i += 1;
 
 				}
 
-				String enmsg = new String(myenchar);
+				String enmsg = new String(mychar);
 
 				try {
 					out.writeUTF(enmsg); 

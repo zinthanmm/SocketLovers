@@ -19,7 +19,7 @@ public class ChatServer extends Application {
 		Thread startServer = new Thread(new StartServer());
 		startServer.start();
 
-		// server window
+		// server window layout settings
 		ScrollPane layout = new ScrollPane();
 		layout.setPrefSize(500, 600);
 		layout.setContent(logs);
